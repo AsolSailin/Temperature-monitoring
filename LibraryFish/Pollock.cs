@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library
+namespace Temperature_monitoring
 {
-    class Fish
+    class Pollock
     {
-        public int maxTemp;
-        public int minTemp;
-        public int time;
+        
     }
 }

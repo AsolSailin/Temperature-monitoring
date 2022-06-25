@@ -45,6 +45,8 @@ namespace Temperature_monitoring
             this.Temp = new System.Windows.Forms.Label();
             this.Create = new System.Windows.Forms.Button();
             this.Open = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -53,6 +55,7 @@ namespace Temperature_monitoring
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 23);
             this.textBoxName.TabIndex = 0;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // textBoxMaxTemp
             // 
@@ -60,6 +63,7 @@ namespace Temperature_monitoring
             this.textBoxMaxTemp.Name = "textBoxMaxTemp";
             this.textBoxMaxTemp.Size = new System.Drawing.Size(100, 23);
             this.textBoxMaxTemp.TabIndex = 1;
+            this.textBoxMaxTemp.TextChanged += new System.EventHandler(this.textBoxMaxTemp_TextChanged);
             // 
             // textBoxMaxTime
             // 
@@ -67,6 +71,7 @@ namespace Temperature_monitoring
             this.textBoxMaxTime.Name = "textBoxMaxTime";
             this.textBoxMaxTime.Size = new System.Drawing.Size(100, 23);
             this.textBoxMaxTime.TabIndex = 2;
+            this.textBoxMaxTime.TextChanged += new System.EventHandler(this.textBoxMaxTime_TextChanged);
             // 
             // textBoxMinTemp
             // 
@@ -74,6 +79,7 @@ namespace Temperature_monitoring
             this.textBoxMinTemp.Name = "textBoxMinTemp";
             this.textBoxMinTemp.Size = new System.Drawing.Size(100, 23);
             this.textBoxMinTemp.TabIndex = 3;
+            this.textBoxMinTemp.TextChanged += new System.EventHandler(this.textBoxMinTemp_TextChanged);
             // 
             // textBoxMinTime
             // 
@@ -81,6 +87,7 @@ namespace Temperature_monitoring
             this.textBoxMinTime.Name = "textBoxMinTime";
             this.textBoxMinTime.Size = new System.Drawing.Size(100, 23);
             this.textBoxMinTime.TabIndex = 4;
+            this.textBoxMinTime.TextChanged += new System.EventHandler(this.textBoxMinTime_TextChanged);
             // 
             // textBoxDate
             // 
@@ -88,6 +95,7 @@ namespace Temperature_monitoring
             this.textBoxDate.Name = "textBoxDate";
             this.textBoxDate.Size = new System.Drawing.Size(100, 23);
             this.textBoxDate.TabIndex = 5;
+            this.textBoxDate.TextChanged += new System.EventHandler(this.textBoxDate_TextChanged);
             // 
             // textBoxTemp
             // 
@@ -95,6 +103,7 @@ namespace Temperature_monitoring
             this.textBoxTemp.Name = "textBoxTemp";
             this.textBoxTemp.Size = new System.Drawing.Size(100, 23);
             this.textBoxTemp.TabIndex = 6;
+            this.textBoxTemp.TextChanged += new System.EventHandler(this.textBoxTemp_TextChanged);
             // 
             // Name
             // 
@@ -167,6 +176,7 @@ namespace Temperature_monitoring
             this.Create.TabIndex = 14;
             this.Create.Text = "Create";
             this.Create.UseVisualStyleBackColor = true;
+            this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
             // Open
             // 
@@ -176,8 +186,13 @@ namespace Temperature_monitoring
             this.Open.TabIndex = 15;
             this.Open.Text = "Open";
             this.Open.UseVisualStyleBackColor = true;
+            this.Open.Click += new System.EventHandler(this.Open_Click);
             // 
-            // Temperature_monitoring
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // TemperatureMonitoring
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,6 +238,8 @@ namespace Temperature_monitoring
         private System.Windows.Forms.Label Temp;
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.Button Open;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 

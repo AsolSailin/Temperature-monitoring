@@ -7,28 +7,29 @@ using System.Threading.Tasks;
 
 namespace Temperature_monitoring
 {
-    class Temperature
+    class FishList
     {
-        public List<int> temp;
+        public List<string> fish;
 
-        public Temperature()
+        public FishList()
         {
-            temp = new List<int>();
+            fish = new List<string>();
         }
-        public void Add(int t)
+        public void Add(string f)
         {
-            temp.Add(t);
+            fish.Add(f);
         }
         public void Load(string path)
         {
             StreamReader stream = null;
             try
             {
+                stream = new StreamReader(File.Open(path, FileMode.Open));
 
             }
-            catch
+            catch (Exception)
             {
-
+                Console.WriteLine("Load Error!");
             }
             finally
             {
@@ -41,11 +42,16 @@ namespace Temperature_monitoring
 
             try
             {
+                stream = new StreamWriter(File.Open(path, FileMode.Create));
 
+                foreach (var f in fish)
+                {
+                    stream.WriteLine(f);
+                }
             }
-            catch
+            catch (Exception)
             {
-
+                Console.WriteLine("Save Error!");
             }
             finally
             {
@@ -54,3 +60,4 @@ namespace Temperature_monitoring
         }
     }
 }
+

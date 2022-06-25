@@ -12,7 +12,7 @@ namespace Temperature_monitoring
 {
     public partial class TemperatureMonitoring : Form
     {
-        private Fish fish;
+        public FishList fish;
         string name, maxTemp, maxTime, minTemp, minTime, date, temp;
         public TemperatureMonitoring()
         {
@@ -70,6 +70,11 @@ namespace Temperature_monitoring
             {
                 fish.Load(openFileDialog.FileName);
             }
+        }
+
+        private void Show_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

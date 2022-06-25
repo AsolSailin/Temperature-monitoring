@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Temperature_monitoring
 {
-    class FishList
+    public class FishList
     {
         public List<string> fish;
 

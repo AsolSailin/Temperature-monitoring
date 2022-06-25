@@ -8,6 +8,6 @@ namespace Temperature_monitoring
 {
     class Pollock
     {
-        
+        string name;
     }
 }

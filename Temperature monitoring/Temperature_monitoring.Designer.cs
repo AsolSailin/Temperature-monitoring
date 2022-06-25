@@ -47,6 +47,8 @@ namespace Temperature_monitoring
             this.Open = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.list = new System.Windows.Forms.ListBox();
+            this.Show = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -144,7 +146,7 @@ namespace Temperature_monitoring
             // MinTime
             // 
             this.MinTime.AutoSize = true;
-            this.MinTime.Location = new System.Drawing.Point(38, 142);
+            this.MinTime.Location = new System.Drawing.Point(36, 142);
             this.MinTime.Name = "MinTime";
             this.MinTime.Size = new System.Drawing.Size(55, 15);
             this.MinTime.TabIndex = 11;
@@ -153,7 +155,7 @@ namespace Temperature_monitoring
             // Date
             // 
             this.Date.AutoSize = true;
-            this.Date.Location = new System.Drawing.Point(38, 171);
+            this.Date.Location = new System.Drawing.Point(36, 171);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(31, 15);
             this.Date.TabIndex = 12;
@@ -162,7 +164,7 @@ namespace Temperature_monitoring
             // Temp
             // 
             this.Temp.AutoSize = true;
-            this.Temp.Location = new System.Drawing.Point(38, 197);
+            this.Temp.Location = new System.Drawing.Point(36, 200);
             this.Temp.Name = "Temp";
             this.Temp.Size = new System.Drawing.Size(73, 15);
             this.Temp.TabIndex = 13;
@@ -170,33 +172,58 @@ namespace Temperature_monitoring
             // 
             // Create
             // 
-            this.Create.Location = new System.Drawing.Point(59, 238);
+            this.Create.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Create.Location = new System.Drawing.Point(36, 237);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(75, 24);
             this.Create.TabIndex = 14;
             this.Create.Text = "Create";
-            this.Create.UseVisualStyleBackColor = true;
+            this.Create.UseVisualStyleBackColor = false;
             this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
             // Open
             // 
-            this.Open.Location = new System.Drawing.Point(163, 238);
+            this.Open.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Open.Location = new System.Drawing.Point(117, 237);
             this.Open.Name = "Open";
             this.Open.Size = new System.Drawing.Size(75, 23);
             this.Open.TabIndex = 15;
             this.Open.Text = "Open";
-            this.Open.UseVisualStyleBackColor = true;
+            this.Open.UseVisualStyleBackColor = false;
             this.Open.Click += new System.EventHandler(this.Open_Click);
             // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
+            // list
+            // 
+            this.list.FormattingEnabled = true;
+            this.list.ItemHeight = 15;
+            this.list.Location = new System.Drawing.Point(299, 19);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(489, 244);
+            this.list.TabIndex = 16;
+            // 
+            // Show
+            // 
+            this.Show.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Show.Location = new System.Drawing.Point(203, 237);
+            this.Show.Name = "Show";
+            this.Show.Size = new System.Drawing.Size(75, 23);
+            this.Show.TabIndex = 17;
+            this.Show.Text = "Show";
+            this.Show.UseVisualStyleBackColor = false;
+            this.Show.Click += new System.EventHandler(this.Show_Click);
+            // 
             // TemperatureMonitoring
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Show);
+            this.Controls.Add(this.list);
             this.Controls.Add(this.Open);
             this.Controls.Add(this.Create);
             this.Controls.Add(this.Temp);
@@ -213,7 +240,6 @@ namespace Temperature_monitoring
             this.Controls.Add(this.textBoxMaxTime);
             this.Controls.Add(this.textBoxMaxTemp);
             this.Controls.Add(this.textBoxName);
-            this.Name = "TemperatureMonitoring";
             this.Text = "Temperature monitoring";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,6 +266,8 @@ namespace Temperature_monitoring
         private System.Windows.Forms.Button Open;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.ListBox list;
+        private System.Windows.Forms.Button Show;
     }
 }
 

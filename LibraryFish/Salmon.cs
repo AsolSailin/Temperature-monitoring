@@ -4,6 +4,6 @@ namespace Temperature_monitoring
 {
     public class Salmon
     {
-        
+        string name;
     }
 }

@@ -22,8 +22,6 @@ namespace Temperature_monitoring
         //string date = "14.06.2022 06:17";
         //string temp = "-10 -8 -4 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -4 -4 -5 -5 -4 -4 -4";
 
-
-
         public void Date_Time(string date)
         {
             this.date = date;
@@ -54,7 +52,6 @@ namespace Temperature_monitoring
 
             for (int i = 0; i < temp2.Length; i++)
             {
-
                 if (int.Parse(temp2[i]) > maxTemp)
                 {
                     max = int.Parse(temp2[i]);

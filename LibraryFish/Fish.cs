@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Temperature_monitoring
 {
-    class Fish
+    public class Fish
     {
         public int maxTemp;
         public int minTemp;

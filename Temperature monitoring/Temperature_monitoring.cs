@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Temperature_monitoring
 {
-    public partial class Form1 : Form
+    public partial class TemperatureMonitoring : Form
     {
-        public Form1()
+        public TemperatureMonitoring()
         {
             InitializeComponent();
         }
-
+        
     }
 }
